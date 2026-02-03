@@ -1,7 +1,11 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Platform-Based Application Development - Week 5
+
+This project is part of the Platform-Based Application Development (ABP) course, focusing on Laravel framework implementation and best practices.
+
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
@@ -11,54 +15,121 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   Basic Laravel routing and controllers
+-   Database interactions using Laravel's Eloquent ORM
+-   Implementation of REST API endpoints
+-   Authentication and authorization systems
+-   Frontend integration using Blade templating
 
 ## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+For learning more about Laravel and this project:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   [Laravel Documentation](https://laravel.com/docs)
+-   [Laracasts](https://laracasts.com)
+-   [Laravel News](https://laravel-news.com)
 
-## Laravel Sponsors
+## Installation Guide
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Prerequisites
 
-### Premium Partners
+Ensure your system meets the following requirements:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+-   **PHP**: Version **8.2 to 8.4**
+-   **Composer**: PHP dependency manager
 
-## Contributing
+For additional details, refer to the [Laravel Server Requirements](https://laravel.com/docs/11.x/deployment#server-requirements).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Installation Steps
 
-## Code of Conduct
+1. **Install PHP, Composer, and Laravel Installer**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    - For Windows users, run this PowerShell command for quick setup:
+        ```powershell
+        Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
+        ```
+    - For other platforms, follow the official installation guides for [PHP](https://www.php.net/manual/en/install.php) and [Composer](https://getcomposer.org/download/).
 
-## Security Vulnerabilities
+2. **Clone the Repository**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ```bash
+    git clone https://github.com/filzarahma/W5_ABP.git
+    cd W5_ABP
+    ```
 
-## License
+3. **Install Dependencies**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    composer install
+    composer update
+    ```
+
+4. **Environment Configuration**
+
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+
+    - Update the `.env` file with your database credentials and other settings.
+
+5. **Start Development Server**
+    ```bash
+    composer run dev
+    ```
+
+The application will be available at [http://localhost:8000](http://localhost:8000).
+
+### Advanced Configuration
+
+For advanced setup options and deployment configurations, consult the official [Laravel Configuration Documentation](https://laravel.com/docs/11.x/configuration).
+
+## About This Project
+
+This Week 5 ABP project implements basic Laravel concepts and includes the following components:
+
+### Project Structure
+
+#### Routes (`/routes/web.php`)
+
+```php
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/lat1', [Lat1Controller::class, 'index']);
+Route::get('/lat1/m2', [Lat1Controller::class, 'method2']);
+```
+
+#### Controller (`/app/Http/Controllers/Lat1Controller.php`)
+
+The controller implements two methods:
+
+-   `index()`: Returns a simple view with name and origin
+-   `method2()`: Returns a view with a table of student data
+
+#### Views
+
+1. **Basic View** (`/resources/views/v_latihan1.blade.php`)
+
+    - Displays name and origin data
+    - Uses Blade templating syntax
+
+2. **Table View** (`/resources/views/v_latihan2.blade.php`)
+    - Displays a table of students
+    - Implements Blade foreach loop
+    - Includes basic HTML structure with dynamic data
+
+### Features Demonstrated
+
+-   Route definition and handling
+-   Controller implementation
+-   Blade template usage
+-   Data passing to views
+-   Basic table rendering
+-   PHP array manipulation
+
+## Acknowledgments
+
+-   Laravel Framework Team
+-   Course Instructors and Teaching Assistants
